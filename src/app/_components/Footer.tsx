@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="https://food-adminpanel-p3kha7xf5-majidkhan0786s-projects.vercel.app/"
                     className="hover:underline"
                   >
                     Admin Dashboard
