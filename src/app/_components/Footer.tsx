@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
                     href="https://discord.gg/4eeurUVvTy"
                     className="hover:underline"
                   >
-                    Discord
+                    Admin Dashboard
                   </a>
                 </li>
               </ul>

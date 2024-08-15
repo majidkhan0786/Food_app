@@ -24,7 +24,7 @@ interface Product {
   imageSrc: string;
   imageAlt: string;
   price: string;
-  color?: string; // Optional if some products may not have a color field
+  color?: string;
 }
 
 export default function Home() {
