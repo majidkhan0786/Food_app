@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const Footer: React.FC = () => {
                 unoptimized
               />
               <span className="self-center ml-3 text-2xl font-semibold whitespace-nowrap dark:text-white">
-                Food App
+                Mj FoodShop
               </span>
             </a>
           </div>
@@ -28,14 +29,24 @@ const Footer: React.FC = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="https://flowbite.com/" className="hover:underline">
+                  <a
+                    href="https://flowbite.com/"
+                    target="__blank"
+                    className="hover:underline"
+                  >
                     Flowbite
                   </a>
+                </li>
+                <li className="mb-4">
+                  <Link href="newDesign" className="hover:underline">
+                    New Home
+                  </Link>
                 </li>
                 <li>
                   <a
                     href="https://tailwindcss.com/"
                     className="hover:underline"
+                    target="__blank"
                   >
                     Tailwind CSS
                   </a>
@@ -49,8 +60,9 @@ const Footer: React.FC = () => {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/themesberg/flowbite"
+                    href="https://github.com/majidkhan0786"
                     className="hover:underline "
+                    target="__blank"
                   >
                     Github
                   </a>
@@ -88,7 +100,11 @@ const Footer: React.FC = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
+            <a
+              href="https://flowbite.com/"
+              target="__blank"
+              className="hover:underline"
+            >
               Flowbite™
             </a>
             . All Rights Reserved.

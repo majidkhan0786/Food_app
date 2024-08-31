@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 interface NavigationItem {
   name: string;
@@ -37,7 +38,7 @@ const Header: React.FC = () => {
               unoptimized
             />
             <span className="self-center ml-3 text-2xl font-semibold whitespace-nowrap dark:text-black">
-              Food App
+              MJ FoodShop
             </span>
           </a>
         </div>
@@ -63,9 +64,12 @@ const Header: React.FC = () => {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link
+            href="/user/login"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          </Link>
         </div>
       </nav>
       <Dialog
