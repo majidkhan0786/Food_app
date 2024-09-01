@@ -47,7 +47,7 @@ const Hero = () => {
             return (
               <Slide
                 key={idx}
-                imageURL={s?.img}
+                imageURL={s?.img?.src}
                 title={s?.title}
                 mainTitle={s?.mainTitle}
                 price={s?.price}
