@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 
@@ -15,11 +16,11 @@ const Navbar = () => {
           </Link>
 
           <Link href="#" className="navbar__link relative">
-            Men's
+            Men&apos;s
           </Link>
 
           <Link href="#" className="navbar__link relative">
-            Women's
+            Women&apos;s
           </Link>
 
           <Link href="#" className="navbar__link relative">
