@@ -1,105 +1,45 @@
-"use client";
-import React, { FormEvent } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function Register() {
-  const handleSubmit = (event: FormEvent) => {
-    event.preventDefault();
-  };
+// Components
+import GoogleSignInButton from "@/app/_components/shared/GoogleSignInButton";
+import loginImage from "../../../../public/assets/signup-image.jpg";
+import RegisterForm from "./registerForm";
+export const metadata: Metadata = {
+  title: "Login",
+};
 
+export default function Page() {
   return (
-    <React.Fragment>
-      <form className="flex">
-        <div className="flex w-1/2 mt-2 min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-          <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img
-              className="mx-auto h-10 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt="Your Company"
-            />
-            <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-              Sign in to your account
-            </h2>
-          </div>
-
-          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Email address
-                </label>
-                <div className="mt-2">
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    className="block px-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center justify-between">
-                  <label
-                    htmlFor="password"
-                    className="block text-sm font-medium leading-6 text-gray-900"
-                  >
-                    Password
-                  </label>
-                  <div className="text-sm">
-                    <a
-                      href="#"
-                      className="font-semibold text-indigo-600 hover:text-indigo-500"
-                    >
-                      Forgot password?
-                    </a>
-                  </div>
-                </div>
-                <div className="mt-2">
-                  <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    autoComplete="current-password"
-                    required
-                    className="block px-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <button
-                  type="submit"
-                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Sign in
-                </button>
-              </div>
-            </form>
-
-            <p className="mt-10 text-center text-sm text-gray-500">
-              Not a member?{" "}
-              <a
-                href="#"
-                className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-              >
-                Start a 14 day free trial
-              </a>
-            </p>
+    <main className="flex h-screen items-center justify-center p-5">
+      <div className="flex h-full max-h-[40rem] w-full max-w-[64rem] overflow-hidden rounded-2xl bg-card shadow-2xl">
+        <div className="w-full space-y-10 overflow-y-auto p-10 md:w-1/2">
+          <h1 className="text-center text-3xl font-bold">
+            Register in to your account
+          </h1>
+          <div className="space-y-5">
+            <GoogleSignInButton />
+            <div className="flex items-center gap-3">
+              <div className="h-px flex-1 bg-muted" />
+              <span>OR</span>
+              <div className="h-px flex-1 bg-muted" />
+            </div>
+            <RegisterForm />
+            <Link
+              href="/user/login"
+              className="block text-center hover:underline"
+            >
+              Already have an account? Log in
+            </Link>
           </div>
         </div>
-        <div className="w-1/2">
-          <img
-            className="h-screen object-fill"
-            src="https://images.unsplash.com/photo-1496917756835-20cb06e75b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
-            alt="Background"
-          />
-        </div>
-      </form>
-    </React.Fragment>
+        <Image
+          src={loginImage}
+          alt=""
+          className="hidden w-1/2 object-cover md:block"
+        />
+      </div>
+    </main>
   );
 }
