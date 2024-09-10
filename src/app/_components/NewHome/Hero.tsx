@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import Slider from "react-slick";
-import Slide from "./_components/NewHome/Slide";
-import BannerOne from "../../public/assets/banner-1.webp";
-import BannerTwo from "../../public/assets/banner-2.webp";
-import BannerThree from "../../public/assets/banner-3.webp";
+import Slide from "./Slide";
+import BannerOne from "../../../../public/assets/banner-1.webp";
+import BannerTwo from "../../../../public/assets/banner-2.webp";
+import BannerThree from "../../../../public/assets/banner-3.webp";
 
 const Hero = () => {
   var settings = {

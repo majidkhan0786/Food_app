@@ -5,6 +5,7 @@ import Image from "next/image";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import ItemCards from "./_components/Card";
+import Loader from "./_components/Loader";
 
 // Define the types for the data structures
 interface Link {
@@ -127,6 +128,7 @@ export default function Home() {
 
   return (
     <React.Fragment>
+      {/* <Loader /> */}
       <div className="bg-white">
         <Header />
         <div className="relative isolate px-6 pt-14 lg:px-8">

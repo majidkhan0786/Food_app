@@ -7,7 +7,7 @@ import GoogleSignInButton from "@/app/_components/shared/GoogleSignInButton";
 import loginImage from "../../../../public/assets/signup-image.jpg";
 import RegisterForm from "./registerForm";
 export const metadata: Metadata = {
-  title: "Login",
+  title: "Register with your account | MJFood store",
 };
 
 export default function Page() {

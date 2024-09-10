@@ -8,7 +8,7 @@ import loginImage from "../../../../public/assets/login-image.jpg";
 import LoginForm from "./LoginForm";
 
 export const metadata: Metadata = {
-  title: "Login",
+  title: "Login with your account into MJFood store",
 };
 
 export default function Page() {

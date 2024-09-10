@@ -7,7 +7,6 @@ import ProductCard from "./ProductCard";
 import Image from "next/image";
 import UserImg from "../../../../public/assets/image.png";
 import Quotes from "../../../../public/assets/Logoimage.png";
-import BannerImg from "../../../../public/assets/banner-2.webp";
 
 const NewProducts = () => {
   const [getData, setgetData] = useState([]);
@@ -30,23 +29,19 @@ const NewProducts = () => {
         <h2 className="font-medium text-2xl pb-4">New Products</h2>
       </div>
       <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-20 xl:gap-y-10">
-        {getData?.map((d, idx) => {
-          return (
-            <div className="container" key={idx}>
-              <ProductCard
-                image={d.image}
-                name={d.category}
-                desc={d?.title}
-                rating={Math.round(d?.rating?.rate)}
-                price={d?.price}
-              />
-            </div>
-          );
-        })}
+        {getData.map((d: Object, idx: number) => (
+          <div className="container" key={idx}>
+            <ProductCard
+              image={d.image}
+              category={d.category}
+              rating={Math.round(d?.rating?.rate)}
+              price={d?.price}
+            />
+          </div>
+        ))}
       </div>
 
       {/* Testimonial */}
-
       <div className="container pt-16 pb-16 grid-cols-2">
         <h2 className="font-medium text-2xl pb-4"> Tesimonials </h2>
         <div className="grid lg:grid-cols-[300px,1fr] gap-4">

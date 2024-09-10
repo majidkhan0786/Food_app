@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li className="mb-4">
-                  <Link href="newDesign" className="hover:underline">
+                  <Link href="/newDesign" className="hover:underline">
                     New Home
                   </Link>
                 </li>

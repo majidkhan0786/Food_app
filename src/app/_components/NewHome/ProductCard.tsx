@@ -1,20 +1,14 @@
 import Image from "next/image";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
-interface propsType {
+interface Product {
   image: string;
-  name: string;
-  desc: string;
+  category: string;
+  price: number;
   rating: number;
-  price: string;
 }
-const ProductCard: React.FC<propsType> = ({
-  image,
-  name,
-  desc,
-  rating,
-  price,
-}) => {
+
+const ProductCard: React.FC<Product> = ({ image, category, rating, price }) => {
   const generateRating = (rating: number) => {
     switch (rating) {
       case 1:
@@ -84,7 +78,7 @@ const ProductCard: React.FC<propsType> = ({
           src={image}
           width={200}
           height={300}
-          alt={name}
+          alt={category}
           className="h-full w-full object-cover object-fill lg:h-full lg:w-full"
         />
       </div>
@@ -93,7 +87,7 @@ const ProductCard: React.FC<propsType> = ({
           <h3 className="text-sm text-gray-700">
             <a>
               <span aria-hidden="true" className="absolute inset-0" />
-              {name}
+              {category}
             </a>
           </h3>
           {/* <p className="mt-1 text-sm text-gray-500">
@@ -103,9 +97,7 @@ const ProductCard: React.FC<propsType> = ({
         </div>
         <p className="text-sm font-medium text-gray-900">
           ${price}
-          <del className="text-gray-500 font-normal">
-            {parseInt(price) + 50}0.00
-          </del>
+          <del className="text-gray-500 font-normal ml-1">{price + 50}.00</del>
         </p>
       </div>
     </div>

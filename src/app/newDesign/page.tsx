@@ -1,10 +1,10 @@
 import React from "react";
 
 // components
-import HeaderTop from "../Head";
-import MainHeader from "../mainHeader";
-import Navbar from "../Navbar";
-import Hero from "../Hero";
+import HeaderTop from "../_components/NewHome/Head";
+import MainHeader from "../_components/NewHome/mainHeader";
+import Navbar from "../_components/NewHome/Navbar";
+import Hero from "../_components/NewHome/Hero";
 import NewProducts from "../_components/NewHome/NewProducts";
 
 const NewHomePage = () => {
